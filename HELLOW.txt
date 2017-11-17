@@ -1,0 +1,31 @@
+class Nested_Loops_Hollow_Rectangles
+{
+    public void RunExercise()
+    {
+        // how are now supposed to make this hollow?
+        // columns are side by side, rows is number of top to bottom
+        // see tut
+        Console.WriteLine("Welcome to the HollowRectanglePrinter Program.");
+        Console.WriteLine("How many columns wide should the rectangle be?"); //i.e. 4
+        int iColMax, iRowMax;
+        string userChoiceC = Console.ReadLine();
+        Int32.TryParse(userChoiceC, out iColMax);
+        Console.WriteLine("How many rows tall should the rectangle be?  "); //i.e. 4
+        string userChoiceR = Console.ReadLine();
+        Int32.TryParse(userChoiceR, out iRowMax);
+        Console.WriteLine("Here you go:");
+
+        if (iRowMax > 0 || iColMax > 0) 
+        {
+            for (int iRow = 0; iRow < iRowMax; iRow++) 
+            {
+                for (int iCol = 0; iCol < iColMax; iCol++) 
+                {
+                    Console.Write("*");
+                }
+
+                Console.WriteLine();
+            }
+        }
+    }
+}
